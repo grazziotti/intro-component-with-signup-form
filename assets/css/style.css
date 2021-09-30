@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/bg-intro-desktop.png');
+    background-color: var(--red);
+    background-size: cover;
+}
+
+.container {
+    width: 111rem;
+}
+
+
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+/* text content */
+.text-content {
+    flex: 1;
+}
+
+.text-content__heading {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+}
+
+.text-content__text-body {
+    margin-top: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: var(--white);
+}
+
+
+/* sign up */
+.sign-up {
+    flex: 1;
+    margin-left: 3.2rem;
+}
+
+.sign-up__pricing {
+    padding: 1.8rem 0;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 1.27px;
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0 8px rgba(0, 0, 0, .15);
+}
+
+.sign-up__white-box {
+    margin-top: 2.4rem;
+    padding: 4rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    box-shadow: 0 8px rgba(0, 0, 0, .15);
+}
+
+.sign-up__input-field {
+    margin-bottom: 2rem;
+}
+
+.sign-up__input-field--error .sign-up__input {
+    background-image: url('../images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right 2.4rem center;
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.sign-up__error-message {
+    width: 100%;
+    margin-top: .8rem;
+    text-align: end;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--red);
+}
+
+.sign-up__input {
+    width: 100%;
+    min-height: 5.5rem;
+    padding: 0 3.2rem;
+    border: 1px solid hsl(0, 0%, 87%);
+    border-radius: .5rem;
+    outline: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.sign-up__input:focus {
+    border-color: var(--blue);
+}
+
+.sign-up__form__btn {
+    position: relative;
+    width: 100%;
+    min-height: 5.5rem;
+    border: 0;
+    border-radius: .5rem;
+    box-shadow: inset 0 -6px hsl(154, 57%, 46%);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: var(--green);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.sign-up__form__btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color .3s;
+}
+
+.sign-up__form__btn:hover::before {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sign-up__terms {
+    margin-top: 1.6rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--grayish-blue);
+}
+
+.sign-up__terms__link {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--red);
+}
+
+
+
+@media (max-width: 1200px) {
+    body {
+        background-image: url('../images/bg-intro-mobile.png');
+    }
+
+    .main {
+        width: 54rem;
+        flex-direction: column;
+    }
+
+
+
+    /* text content */
+    .text-content {
+        text-align: center;
+    }
+
+    .text-content__heading {
+        font-size: 2.8rem;
+    }
+
+    .text-content__text-body {
+        font-size: 1.6rem;
+    }
+
+
+    /* sign up */
+    .sign-up {
+        width: 100%;
+        margin-top: 6.4rem;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    body {
+        height: auto;
+    }
+
+    .main {
+        width: 100%;
+        padding: 8rem 2.4rem;
+    }
+
+    .sign-up__white-box {
+        padding: 2.4rem;
+    }
+}
