@@ -1,5 +1,8 @@
 const submitBtn = document.querySelector('.sign-up__form__btn')
 const inputs = document.querySelectorAll('.sign-up__input')
+const elementsWithAnimate = document.querySelectorAll('[data-anime]')
+
+elementsWithAnimate.forEach( el => setTimeout( () => el.classList.add('animate'), 1))
 
 const clearError = input => {
     const inputField = input.closest('.sign-up__input-field--error')

@@ -170,6 +170,24 @@ body {
     color: var(--red);
 }
 
+[data-anime] {
+    opacity: 0;
+    transition: .5s;
+}
+
+[data-anime="left"] {
+    transform: translateX(-5rem);
+}
+
+[data-anime="top"] {
+    transform: translateY(-5rem);
+}
+
+[data-anime].animate {
+    transform: translate(0);
+    opacity: 1;
+}
+
 
 
 @media (max-width: 1200px) {
